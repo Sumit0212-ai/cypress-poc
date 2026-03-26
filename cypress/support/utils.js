@@ -1,15 +1,15 @@
-import { selectors } from "./locators";
 export const login = (username,password) =>{    
-cy.get(selectors.login.username).type(username);
-cy.get(selectors.login.password).type(password);
-cy.get(selectors.login.loginBtn).click();
+cy.get('#user-name').type(username);
+cy.get('#password').type(password);
+cy.get('#login-button').click();
 };
 
 export const addProductsTocart = (products) =>{
-    products.forEach((product) => {
-    cy.contains(selectors.cart.cartItem, product)
-    .parents('.inventory_item_name')
-    .find(selectors.cart.addTocartBtn)
+    products.forEach(product => {
+    cy.get('.inventory_item_name')
+    .contains(product)
+    .find('button')
+    .should('be.visible')
     .click();
 });
 };
