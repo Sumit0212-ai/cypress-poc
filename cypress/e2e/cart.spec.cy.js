@@ -20,9 +20,9 @@ it ('should add products to cart and validte cart badge',() => {
 
 // Go to cart 
 cy.get(selectors.cart.cartIcon).click();
-// validate products
+ //validate products
  testData.products.forEach(product =>{
- cy.contains(selectors.cart.cartItem, product).should('be.visible');
+ cy.contains(selectors.cart.cartItem, product).should("be.visible");
  })
  })
 });

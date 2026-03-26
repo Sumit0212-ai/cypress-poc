@@ -8,11 +8,15 @@ cy.get(selectors.login.loginBtn).click();
 export const addProductsTocart = (products) =>{
     products.forEach((product) => {
     cy.contains(selectors.cart.cartItem, product)
-    .parents('.inventory_item_name')
-    .find(selectors.cart.addTocartBtn)
+   .closest('.inventory_item')
+   .find(selectors.cart.addTocartBtn)
     .click();
+  
 });
 };
-
+// export const proceedToCheckout = () => {
+//     cy.get(selectors.cart.cartIcon).click();
+//     cy.get(selectors.cart.checkoutBtn).click();
+// };
 
     
