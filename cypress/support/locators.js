@@ -10,7 +10,7 @@ export const selectors = {
         addTocartBtn: '[data-test^="add-to-cart"]',
         cartIcon: '[data-test="shopping-cart-link"]',
         cartBadge: '[data-test="shopping-cart-badge"]',
-        cartItem: '.inventory_item_name'
+        cartItem: '[data-test="inventory-item-name"]'
        // checkoutBtn: '[data-test="checkout"]'
     }
     // checkout: {
