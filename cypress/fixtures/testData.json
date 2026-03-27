@@ -15,5 +15,10 @@
    "products":[
     "Sauce Labs Backpack",
      "Sauce Labs Bike Light"
-   ]
+   ],
+   "checkout": {
+    "firstName": "sumit",
+    "lastName": "Test",
+    "postalCode": "422009"
+   }
 }
