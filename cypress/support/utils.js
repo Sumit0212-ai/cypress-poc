@@ -33,6 +33,7 @@ export const valiateCheckoutSuccess = () => {
     cy.get(selectors.checkout.overviewPage).should('exist');
     cy.get(selectors.checkout.successMsg)
         .should('contain.text', 'Thank you for your order!');
+        
 }
         //sort by low to high
         export const sortByLowToHigh = () => { 

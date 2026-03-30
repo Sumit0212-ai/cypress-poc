@@ -10,7 +10,7 @@ before(() => {
 });
 });
 beforeEach(() => {
-cy.visit('https://www.saucedemo.com/');
+cy.visit('/');
 });
   
 it('login successfully with valid user', ()=>{

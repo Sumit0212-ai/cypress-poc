@@ -25,5 +25,10 @@ export const selectors = {
     sort: {
         sortDropdown: '[data-test="product-sort-container"]',
         productPrice: '[data-test="inventory-item-price"]'
+    },
+
+    inventory: {
+        inventoryList: '[data-test="inventory-list"]'
     }
+
 }

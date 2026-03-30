@@ -9,7 +9,7 @@ describe('Sorting Validation', () => {
             testData = data;
         });
     });
-
+//cy.wait();
     beforeEach(() => {
         cy.visit('/');
         login(testData.users.validUser.username, testData.users.validUser.password);
