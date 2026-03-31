@@ -2,8 +2,8 @@
 import { selectors } from "../support/locators";
 import { login } from "../support/utils";
 
-describe('SauceDemo Test',()=> {
-let testData;
+describe('SauceDemo Test', () => {
+    let testData;
 
 before(() => {
     cy.fixture('testData').then((data) =>{
