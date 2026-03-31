@@ -12,15 +12,18 @@ describe('Checkout flow', () => {
 
     beforeEach(() => {
         cy.visit('/');
-        login(testData.users.validUser.username, testData.users.validUser.password);
+        cy.login(testData.users.validUser.username, testData.users.validUser.password);
     });
-    it ('should complete checkout successfully', () =>{
-        addProductsTocart(testData.products);
-        proceedToCheckout();
-        enterCheckoutDetails(testData.checkout.firstName, testData.checkout.lastName, testData.checkout.postalCode);
-      //  Validate overview page
-      cy.get(selectors.checkout.overviewPage).should('be.visible')
-      completeCheckout();
-      valiateCheckoutSuccess();
+    it('should complete checkout successfully', () => {
+        cy.addProductsTocart(testData.products);
+        cy.proceedToCheckout();
+         cy.wait(5000)
+        cy.enterCheckoutDetails(testData.checkout.firstName, testData.checkout.lastName, testData.checkout.postalCode);
+         cy.wait(5000)
+        //  Validate overview page
+        cy.get(selectors.checkout.overviewPage).should('be.visible')
+         cy.wait(5000)
+        cy.completeCheckout();
+        valiateCheckoutSuccess();
     });
 })

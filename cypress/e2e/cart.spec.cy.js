@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { login, addProductsTocart } from "../support/utils";
+//import './commands';
 import { selectors } from "../support/locators";
 describe('Add product to cart', () => {
   let testData;
@@ -10,11 +10,14 @@ describe('Add product to cart', () => {
   });
   beforeEach(() => {
     cy.visit('/');
-    login(testData.users.validUser.username, testData.users.validUser.password);
-  })
+    //using custom command
+    cy.login(
+    testData.users.validUser.username, testData.users.validUser.password);
+  });
 
   it('should add products to cart and validte cart badge count', () => {
-    addProductsTocart(testData.products);
+    cy.addProductsTocart(testData.products);
+    cy.wait(5000)
     // Validate products in cart page
     cy.get(selectors.cart.cartIcon).click();
 

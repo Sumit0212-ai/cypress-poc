@@ -12,7 +12,7 @@ describe('Sorting Validation', () => {
 //cy.wait();
     beforeEach(() => {
         cy.visit('/');
-        login(testData.users.validUser.username, testData.users.validUser.password);
+        cy.login(testData.users.validUser.username, testData.users.validUser.password);
     });
     it('should sort products by price low to high', () =>{
         //Apply sorting
